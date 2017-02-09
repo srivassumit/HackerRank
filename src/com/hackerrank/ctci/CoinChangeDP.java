@@ -1,0 +1,40 @@
+package com.hackerrank.ctci;
+
+import java.util.Scanner;
+
+/**
+ * <a>https://www.hackerrank.com/challenges/ctci-coin-change</a>
+ * 
+ * @author Sumit
+ *
+ */
+public class CoinChangeDP {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int m = in.nextInt();
+		int coins[] = new int[m];
+		for (int coins_i = 0; coins_i < m; coins_i++) {
+			coins[coins_i] = in.nextInt();
+		}
+		System.out.println(makeChange(coins, n));
+		in.close();
+	}
+
+	public static long makeChange(int[] coins, int money) {
+		int n = coins.length;
+		long[] table = new long[money + 1];
+
+		table[0] = 1;
+		for (int i = 0; i < n; i++)
+			for (int j = coins[i]; j <= money; j++)
+				table[j] += table[j - coins[i]];
+
+		return table[money];
+	}
+
+}
