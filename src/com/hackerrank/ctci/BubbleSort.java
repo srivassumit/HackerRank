@@ -34,6 +34,7 @@ public class BubbleSort {
 
 				// Swap adjacent elements if they are in decreasing order
 				if (a[j] > a[j + 1]) {
+					swap(a, j, j + 1);
 					numberOfSwaps++;
 				}
 			}
@@ -46,6 +47,10 @@ public class BubbleSort {
 				+ " swaps.\n".concat("First Element: " + a[0]).concat("\nLast Element: " + a[n - 1]);
 	}
 
+	private static void swap(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 		numSwaps++;
 	}
 
