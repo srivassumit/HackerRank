@@ -1,4 +1,4 @@
-package com.hackerrrank.codesprint9;
+package com.hackerrank.codesprint9;
 
 import java.util.Scanner;
 
