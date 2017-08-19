@@ -1,4 +1,5 @@
 package com.ai;
+
 import java.io.*;
 import java.util.*;
 
@@ -34,7 +35,7 @@ public class Tron {
         int mx = move[0];
         int my = move[1];
         char chp = board[mx].toCharArray()[my];
-        if (String.valueOf(chp)==player || chp=='#' || (mx==px && my=py)) {
+        if (String.valueOf(chp)==player || chp=='#' || (mx==px && my==py)) {
             return false;
         } else {
             return true;
