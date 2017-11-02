@@ -48,7 +48,7 @@ public class MisereNim {
 		in.close();
 	}
 
-	private static boolean firstWinner(int[] piles) {
+	public static boolean firstWinner(int[] piles) {
 		if (piles.length == 1) {
 			return piles[0] > 1;
 		}
