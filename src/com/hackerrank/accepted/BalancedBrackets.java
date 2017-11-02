@@ -20,11 +20,15 @@ public class BalancedBrackets {
 	private static final List<Character> OUTBRACKETS = Arrays.asList('}', ']', ')');
 	private static Map<Character, Character> inOutMap;
 
-	public static void main(String[] args) {
+	static {
 		inOutMap = new HashMap<Character, Character>();
 		inOutMap.put('}', '{');
 		inOutMap.put(']', '[');
 		inOutMap.put(')', '(');
+	}
+
+	public static void main(String[] args) {
+
 		Scanner in = new Scanner(System.in);
 		int t = in.nextInt();
 		for (int a0 = 0; a0 < t; a0++) {
